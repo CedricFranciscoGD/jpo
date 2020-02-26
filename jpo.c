@@ -16,7 +16,7 @@ int main (){
 
 	printf("Veuillez inserer votre prenom:\n");
 	scanf("%s",&nomJoueur);
-	printf("Bonjour et bienvenue %s vous souhaitez vous renseignez sur le metier de game designer \net plus generalement sur la formation de game design proposee par l'ETPA.\nVeuillez repondre aux 10 questions qui vont suivre. \nUn score vous sera attribue en fonction de vos reponses afin de jauger votre compatibilite avec la formation\n",&nomJoueur);
+	printf("Bonjour et bienvenue %s vous souhaitez vous renseignez sur le metier de game designer \net plus generalement sur la formation de game design proposee par l'ETPA.\nVeuillez repondre aux 11 questions qui vont suivre. \nUn score vous sera attribue en fonction de vos reponses afin de jauger votre compatibilite avec la formation\n",&nomJoueur);
 	
 	//QUESTION 1 ______________________________
     printf("Si tu devais choisir un jeu en open world, tu choisirais :\n1-GTA \n2-Minecraft \n3-Assasin's Creed \n4-Skyrim\n");
@@ -34,7 +34,7 @@ int main (){
     
     if (choixRep==3){
         
-        scoreJoueur -= 1;
+        scoreJoueur --;
     }
     
     if (choixRep==4){
@@ -61,7 +61,7 @@ int main (){
     
     if (choixRep==2){
         
-        scoreJoueur += -1;
+        scoreJoueur --;
     }
     
     if (choixRep==3){
@@ -88,7 +88,7 @@ int main (){
     
     if (choixRep==1){
         
-        scoreJoueur += -1;
+        scoreJoueur --;
     }
     
     if (choixRep==2){
@@ -135,7 +135,7 @@ int main (){
     
     if (choixRep==4){
         
-        scoreJoueur -= 1;
+        scoreJoueur --;
     }
     while(choixRep!=1 && choixRep!=2 && choixRep!=3 && choixRep!=4)
 	{
@@ -152,7 +152,7 @@ int main (){
     
     if (choixRep==1){
         
-        scoreJoueur -= 1;
+        scoreJoueur --;
     }
     
     if (choixRep==2){
@@ -211,21 +211,21 @@ int main (){
 	printf("7- Si tu devais choisir un jeu de strategie/gestion, lequel prendrais-tu ? \n");
 	printf("1-Age of Empire\n2-Civilization\n3-Warcraft\n4-Les Sims\n");
 	scanf("%d",&choixRep);
-	if(choixRep==2)
-	{
-		scoreJoueur +=2;
-	}
-	else if(choixRep==4)
-	{
-		scoreJoueur--;
-	}
-	else if(choixRep==1)
+	if(choixRep==1)
 	{
 		scoreJoueur++;
+	}
+	else if(choixRep==2)
+	{
+		scoreJoueur +=2;
 	}
 	else if(choixRep==3)
 	{
 		scoreJoueur++;
+	}
+	else if(choixRep==4)
+	{
+		scoreJoueur--;
 	}
 	while(choixRep!=1 && choixRep!=2 && choixRep!=3 && choixRep!=4)
 	{
@@ -271,13 +271,13 @@ int main (){
 	{
 		scoreJoueur +=2;
 	}
-	else if(choixRep==3)
-	{
-		scoreJoueur--;
-	}
 	else if(choixRep==2)
 	{
 		scoreJoueur++;
+	}
+	else if(choixRep==3)
+	{
+		scoreJoueur--;
 	}
 	else if(choixRep==4)
 	{
@@ -323,17 +323,18 @@ int main (){
 	printf("11- Si tu devais choisir un jeu de rythme/musique, sur lequel t'ambiancerais-tu ?\n");
 	printf("1-Osu\n2-Guitar Hero\n3-Piano Tiles\n4-Parapara the Rapper\n");
 	scanf("%d",&choixRep);
-	if(choixRep==2)
+	
+	if(choixRep==1)
+	{
+		scoreJoueur++;
+	}
+	else if(choixRep==2)
 	{
 		scoreJoueur +=2;
 	}
 	else if(choixRep==3)
 	{
 		scoreJoueur--;
-	}
-	else if(choixRep==1)
-	{
-		scoreJoueur++;
 	}
 	else if(choixRep==4)
 	{
