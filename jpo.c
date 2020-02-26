@@ -350,6 +350,30 @@ int main (){
 	printf("Score : %d.\n", scoreJoueur);
     
 	
+	if (scoreJoueur < 0)
+	{
+		printf("Je crois que vous vous etes perdu............. compatibilite 0%\n");
+	}
+	else if(scoreJoueur >=0 && scoreJoueur <= 5)
+	{
+		printf("Change de voie, si tu veux casino recrute.............. compatibilite 10%\n");
+	}
+	else if(scoreJoueur >=6 && scoreJoueur<= 10)
+	{
+		printf("C'est pas ouf, va falloir revoir les classiques.............. compatibilite 30%\n");
+	}
+	else if(scoreJoueur >=11 && scoreJoueur<= 15)
+	{
+		printf("Pas trop mal............. compatibilite 50% \n");
+	}
+	else if(scoreJoueur >=16 && scoreJoueur<= 19)
+	{
+		printf("Wow %s il semblerait que tu sois fait(e) pour le game design............. compatibilite 80% \n", &nomJoueur);
+	}
+	else if(scoreJoueur >=20 )
+	{
+		printf("Impressionnant %s c'est donc toi le(la) future game designer dont parle la legende !!............. compatibilite 1000% \n", &nomJoueur);
+	}
     
 
 	return 0;
