@@ -41,7 +41,12 @@ int main (){
         
         scoreJoueur += +1;
     }
-    
+    while(choixRep!=1 && choixRep!=2 && choixRep!=3 && choixRep!=4)
+	{
+		printf("ATTENTION, '%d' n'est pas compris dans les choix disponible\n",choixRep );
+		printf("Choisissez une reponse valide\n");
+		scanf("%d",&choixRep);
+	}
     printf("Score : %d.\n", scoreJoueur);
     
     //QUESTION 2 ______________________________
@@ -67,7 +72,12 @@ int main (){
         
         scoreJoueur += +1;
     }
-    
+    while(choixRep!=1 && choixRep!=2 && choixRep!=3 && choixRep!=4)
+	{
+		printf("ATTENTION, '%d' n'est pas compris dans les choix disponible\n",choixRep );
+		printf("Choisissez une reponse valide\n");
+		scanf("%d",&choixRep);
+	}
     printf("Score : %d.\n", scoreJoueur);
     
     //QUESTION 3 ______________________________
@@ -93,7 +103,12 @@ int main (){
         
         scoreJoueur += 0;
     }
-    
+    while(choixRep!=1 && choixRep!=2 && choixRep!=3 && choixRep!=4)
+	{
+		printf("ATTENTION, '%d' n'est pas compris dans les choix disponible\n",choixRep );
+		printf("Choisissez une reponse valide\n");
+		scanf("%d",&choixRep);
+	}
     printf("Score : %d.\n", scoreJoueur);
     
     //QUESTION 4 ______________________________
@@ -119,7 +134,12 @@ int main (){
         
         scoreJoueur += -1;
     }
-    
+    while(choixRep!=1 && choixRep!=2 && choixRep!=3 && choixRep!=4)
+	{
+		printf("ATTENTION, '%d' n'est pas compris dans les choix disponible\n",choixRep );
+		printf("Choisissez une reponse valide\n");
+		scanf("%d",&choixRep);
+	}
     printf("Score : %d.\n", scoreJoueur);
     
     //QUESTION 5 ______________________________
@@ -145,8 +165,13 @@ int main (){
         
         scoreJoueur += 0;
     }
-    
-    printf("Votre score est de %d", scoreJoueur);
+    while(choixRep!=1 && choixRep!=2 && choixRep!=3 && choixRep!=4)
+	{
+		printf("ATTENTION, '%d' n'est pas compris dans les choix disponible\n",choixRep );
+		printf("Choisissez une reponse valide\n");
+		scanf("%d",&choixRep);
+	}
+    printf("Score : %d.\n", scoreJoueur);
 	printf("6- Si tu devais choisir un versus fighting, lequel serait-il ? \n");
 	printf("1-Street Fighter\n2-Soul Calibur\n3-Tekken\n4-Mortal Kombat\n");
 	scanf("%d",&choixRep);
