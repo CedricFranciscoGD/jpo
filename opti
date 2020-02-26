@@ -1,0 +1,137 @@
+#include <stdio.h>
+// Bibliothèque permettant de générer des nombres aléatoire pour programmer le comportement du monstre
+#include <stdlib.h>
+#include <time.h>
+
+
+struct question
+{
+    char question[64];
+    char reponses[128];
+};
+
+typedef struct question question;
+
+int main (){
+
+    //Vars etc ____________
+    int play;
+    int i;
+    
+    int choixRep;
+	int scoreJoueur;
+	char nomJoueur;
+    int nb_question;
+    
+    scoreJoueur = 0;
+    nb_question = 11;
+    
+    
+    question a_question[11];
+    play = 1;
+    
+    question question1 = {"en open world", "1-GTA \n2-Minecraft \n3-Assasin's Creed \n4-Skyrim\n"};
+    question question2 = {"FPS", "1-Halo \n2-Call Of Duty \n3-Counter Strike GO \n4-Rainbow 6 Siege\n"};
+    question question3 = {"de simulation", "1-Fifa \n2-Wii Sport \n3-Just Dance \n4-NBA\n"};
+    question question4 = {"de course", "1-Forza \n2-Need For Speed \n3-Mario Kart \n4-Gran Turismo\n"};
+    question question5 = {"d'aventure", "1-Tomb Raider \n2-Zelda \n3-Uncharted GO \n4-God Of War\n"};
+    question question6 = {"Versus Fighting(VS)", "1-Street Fighter\n2-Soul Calibur\n3-Tekken\n4-Mortal Kombat\n"};
+    question question7 = {"de strategie/gestion", "1-Age of Empire\n2-Civilization\n3-Warcraft\n4-Les Sims\n"};
+    question question8 = {"mobile", "1-Candy Crush Saga\n2-DBZ Dokkan Battle\n3-Clash Royal\n4-Pokemon Go\n"};
+    question question9 = {"platformer", "1-Mario\n2-Rayman\n3-Sonic\n4-Alex Kidd\n"};
+    question question10 = {"survival horror", "1-Resident Evil\n2-Alone In The Dark\n3-The Evil Within\n4-Alien Isolation\n"};
+    question question11 = {"rythme/musique", ""};
+
+    printf("Veuillez entrer votre prenom:\n");
+    
+    while (play != 0){
+    
+        for (i=0, i<nb_question){
+        
+            printf("Si tu devais choisir un jeu %s, tu choisirais :\n1-GTA \n2-Minecraft \n3-Assasin's Creed \n4-Skyrim\n", a_question[i].question, a_question[i].reponses);
+                
+            scanf("%d", &choix);
+            
+            while(choixRep!=1 && choixRep!=2 && choixRep!=3 && choixRep!=4)
+            {
+                printf("ATTENTION, '%d' n'est pas compris dans les choix disponible\n",choixRep );
+                printf("Choisissez une reponse valide\n");
+                scanf("%d",&choixRep);
+            }
+        }
+        
+        if (i==1){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i==3){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i==4){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i==5){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i==6){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i==7){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i==8){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i==9){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i==10){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i==11){
+            if (choixRep==1){scoreJoueur= ;}
+            if (choixRep==2){scoreJoueur= ;}
+            if (choixRep==3){scoreJoueur= ;}
+            if (choixRep==4){scoreJoueur= ;}   
+        }
+        
+        if (i!=nb_question){printf("Score : %d.", scoreJoueur)}
+    }
+    
+    
+}

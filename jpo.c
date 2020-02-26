@@ -14,7 +14,7 @@ int main (){
 
 	scoreJoueur=0;
 
-	printf("Veuillez inserer votre prenom:\n");
+	printf("Veuillez entrer votre prenom:\n");
 	scanf("%s",&nomJoueur);
 	printf("Bonjour et bienvenue %s vous souhaitez vous renseignez sur le metier de game designer et plus generalement sur la formation de game design proposee par l'ETPA\nVeuillez repondre aux 10 questions qui vont suivre, un score vous sera attribue en fonction de vos reponses afin de jauger votre compatibilite avec la formation",&nomJoueur);
 	
@@ -81,7 +81,7 @@ int main (){
     printf("Score : %d.\n", scoreJoueur);
     
     //QUESTION 3 ______________________________
-    printf("Si tu devais choisir un jeu de simulation sportive, tu choisirais :\n1-Fifa \n2-Wii Sport \n3-Just Dance \n4-Rainbow 6 NBA\n");
+    printf("Si tu devais choisir un jeu de simulation sportive, tu choisirais :\n1-Fifa \n2-Wii Sport \n3-Just Dance \n4-\n");
     scanf("%d",&choixRep);
     
     if (choixRep==1){
