@@ -8,9 +8,10 @@
 int main (){
 
 	int choixRep;
-	int scoreJoueur=0;
+	int scoreJoueur;
 	char nomJoueur;
 
+    scoreJoueur = 0;
 
 	printf("Veuillez inserer votre prenom:\n");
 	scanf("%s",&nomJoueur);
