@@ -19,7 +19,7 @@ int main (){
 	printf("Bonjour et bienvenue %s vous souhaitez vous renseignez sur le metier de game designer et plus generalement sur la formation de game design proposee par l'ETPA\nVeuillez repondre aux 10 questions qui vont suivre, un score vous sera attribue en fonction de vos reponses afin de jauger votre compatibilite avec la formation",&nomJoueur);
 	
 	//QUESTION 1 ______________________________
-    printf("Si tu devais choisir un jeu en open world, tu choisirais :\n 1-GTA \n2-Minecraft \n3-Assasin's Creed \n4-Skyrim");
+    printf("Si tu devais choisir un jeu en open world, tu choisirais :\n1-GTA \n2-Minecraft \n3-Assasin's Creed \n4-Skyrim\n");
     scanf("%d",&choixRep);
     
     if (choixRep==1){
@@ -42,10 +42,10 @@ int main (){
         scoreJoueur += +1;
     }
     
-    printf("Score : %d.", scoreJoueur);
+    printf("Score : %d.\n", scoreJoueur);
     
     //QUESTION 2 ______________________________
-    printf("Si tu devais choisir un jeu FPS, tu choisirais :\n 1-Halo \n2-Call Of Duty \n3-Counter Strike GO \n4-Rainbow 6 Siege");
+    printf("Si tu devais choisir un jeu FPS, tu choisirais :\n1-Halo \n2-Call Of Duty \n3-Counter Strike GO \n4-Rainbow 6 Siege\n");
     scanf("%d",&choixRep);
     
     if (choixRep==1){
@@ -68,10 +68,10 @@ int main (){
         scoreJoueur += +1;
     }
     
-    printf("Score : %d.", scoreJoueur);
+    printf("Score : %d.\n", scoreJoueur);
     
     //QUESTION 3 ______________________________
-    printf("Si tu devais choisir un jeu de simulation sportive, tu choisirais :\n 1-Fifa \n2-Wii Sport \n3-Just Dance \n4-Rainbow 6 NBA");
+    printf("Si tu devais choisir un jeu de simulation sportive, tu choisirais :\n1-Fifa \n2-Wii Sport \n3-Just Dance \n4-Rainbow 6 NBA\n");
     scanf("%d",&choixRep);
     
     if (choixRep==1){
@@ -94,10 +94,10 @@ int main (){
         scoreJoueur += 0;
     }
     
-    printf("Score : %d.", scoreJoueur);
+    printf("Score : %d.\n", scoreJoueur);
     
     //QUESTION 4 ______________________________
-    printf("Si tu devais choisir un jeu de course, tu choisirais :\n 1-Forza \n2-Need For Speed \n3-Mario Kart \n4-Gran Turismo");
+    printf("Si tu devais choisir un jeu de course, tu choisirais :\n1-Forza \n2-Need For Speed \n3-Mario Kart \n4-Gran Turismo\n");
     scanf("%d",&choixRep);
     
     if (choixRep==1){
@@ -120,10 +120,10 @@ int main (){
         scoreJoueur += -1;
     }
     
-    printf("Score : %d.", scoreJoueur);
+    printf("Score : %d.\n", scoreJoueur);
     
     //QUESTION 5 ______________________________
-    printf("Si tu devais choisir un jeu d'aventure, tu choisirais :\n 1-Tomb Raider \n2-Zelda \n3-Uncharted GO \n4-God Of War");
+    printf("Si tu devais choisir un jeu d'aventure, tu choisirais :\n1-Tomb Raider \n2-Zelda \n3-Uncharted GO \n4-God Of War\n");
     scanf("%d",&choixRep);
     
     if (choixRep==1){
