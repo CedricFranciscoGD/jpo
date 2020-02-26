@@ -5,7 +5,7 @@
 
 struct question
 {
-    char question[1024];
+    char questiontxt[350];
 };
 
 typedef struct question question;
@@ -13,20 +13,17 @@ typedef struct question question;
 int main (){
 
     //Vars etc ____________
-    int play;
+    int play = 1;
     int i;
-    
     int choixRep;
 	int scoreJoueur;
 	char nomJoueur;
-    int nb_question;
     
+    int nb_question = 11;
     scoreJoueur = 0;
-    nb_question = 11;
     
     
     question a_question[11];
-    play = 1;
     
     question question1 = {"Si tu devais choisir un jeu en open world, tu choisirais :\n1-GTA \n2-Minecraft \n3-Assasin's Creed \n4-Skyrim\n"};
     question question2 = {"Si tu devais choisir un jeu FPS, tu choisirais :\n1-Halo \n2-Call Of Duty \n3-Counter Strike GO \n4-Rainbow 6 Siege\n"};
@@ -39,18 +36,33 @@ int main (){
     question question9 = {"Si tu devais choisir un paltformer, sur lequel sauterais-tu ? \n1-Mario\n2-Rayman\n3-Sonic\n4-Alex Kidd\n"};
     question question10 = {"Si tu devais choisir un survival horror, pour lequel frissonerais-tu ?\n1-Resident Evil\n2-Alone In The Dark\n3-The Evil Within\n4-Alien Isolation\n"};
     question question11 = {"Si tu devais choisir un jeu de rythme/musique, sur lequel t'ambiancerais-tu ?\n1-Osu\n2-Guitar Hero\n3-Piano Tiles\n4-Parapara the Rapper\n"};
+    
+    a_question[0] = question1;
+    a_question[1] = question2;
+    a_question[2] = question3;
+    a_question[3] = question4;
+    a_question[4] = question5;
+    a_question[5] = question6;
+    a_question[6] = question7;
+    a_question[7] = question8;
+    a_question[8] = question9;
+    a_question[9] = question10;
+    a_question[10] = question11;
+    
+    
 
     //INTRO
     printf("Veuillez entrer votre prenom:\n");
     scanf("%s", &nomJoueur);
     printf("Bonjour et bienvenue %s, vous souhaitez vous renseignez sur le metier de game designer \net plus generalement sur la formation de game design proposee par l'ETPA.\nVeuillez repondre aux 10 questions qui vont suivre. \nUn score vous sera attribue en fonction de vos reponses afin de jauger votre compatibilite avec la formation\n",&nomJoueur);
+    //printf("%d", play);
     
     while (play != 0){
     
         //display game
-        for (i=0; i<11; i++){
+        for (i=0; i<=10; i++){
         
-            printf("%s", a_question[i].question);
+            printf("%s", a_question[i].questiontxt);
                 
             //scan reponse
             scanf("%d", &choixRep);
@@ -113,9 +125,9 @@ int main (){
 
             if (i==8){
                 if (choixRep==1){scoreJoueur --;}
-                if (choixRep==2){ }
-                if (choixRep==3){ }
-                if (choixRep==4){ }   
+                if (choixRep==2){scoreJoueur += 0;}
+                if (choixRep==3){scoreJoueur += 0;}
+                if (choixRep==4){scoreJoueur += 0;}   
             }
 
             if (i==9){
@@ -139,11 +151,13 @@ int main (){
                 if (choixRep==4){scoreJoueur ++;}   
             }
             
-            if (i!=nb_question){printf("Score : %d.", scoreJoueur);}
+            if (i!=nb_question){printf("Score : %d.\n\n", scoreJoueur);}
         }
         
-        if (i=11){play=0;}
+        if (i=10){play=0;}
     }
     
     printf("Votre score final est de : %d", scoreJoueur);
+    
+    return 0;
 }
