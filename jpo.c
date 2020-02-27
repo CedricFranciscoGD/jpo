@@ -17,25 +17,29 @@ int main (){
     int i;
     int choixRep;
 	int scoreJoueur;
-	char nomJoueur;
+	float bonneReponse;
+	float compatibilite =0;
+	char nomJoueur[50];
     
     int nb_question = 11;
     scoreJoueur = 0;
     
-    
+    bonneReponse=5.26;
+    //compatibilite=0;
+
     question a_question[11];
     
-    question question1 = {"Si tu devais choisir un jeu en open world, tu choisirais :\n1-GTA \n2-Minecraft \n3-Assasin's Creed \n4-Skyrim\n"};
-    question question2 = {"Si tu devais choisir un jeu FPS, tu choisirais :\n1-Halo \n2-Call Of Duty \n3-Counter Strike GO \n4-Rainbow 6 Siege\n"};
-    question question3 = {"Si tu devais choisir un jeu de simulation sportive, tu choisirais :\n1-Fifa \n2-Wii Sport \n3-Just Dance \n4-NBA\n"};
-    question question4 = {"Si tu devais choisir un jeu de course, tu choisirais :\n1-Forza \n2-Need For Speed \n3-Mario Kart \n4-Gran Turismo\n"};
-    question question5 = {"Si tu devais choisir un jeu d'aventure, tu choisirais :\n1-Tomb Raider \n2-Zelda \n3-Uncharted GO \n4-God Of War\n"};
-    question question6 = {"Si tu devais choisir un versus fighting, lequel serait-il ?\n1-Street Fighter\n2-Soul Calibur\n3-Tekken\n4-Mortal Kombat\n"};
-    question question7 = {"Si tu devais choisir un jeu de strategie/gestion, lequel prendrais-tu ?\n1-Age of Empire\n2-Civilization\n3-Warcraft\n4-Les Sims\n"};
-    question question8 = {"Si tu devais choisir un jeu mobile, ce serait lequel ?\n1-Candy Crush Saga\n2-DBZ Dokkan Battle\n3-Clash Royal\n4-Pokemon Go\n"};
-    question question9 = {"Si tu devais choisir un paltformer, sur lequel sauterais-tu ? \n1-Mario\n2-Rayman\n3-Sonic\n4-Alex Kidd\n"};
-    question question10 = {"Si tu devais choisir un survival horror, pour lequel frissonerais-tu ?\n1-Resident Evil\n2-Alone In The Dark\n3-The Evil Within\n4-Alien Isolation\n"};
-    question question11 = {"Si tu devais choisir un jeu de rythme/musique, sur lequel t'ambiancerais-tu ?\n1-Osu\n2-Guitar Hero\n3-Piano Tiles\n4-Parapara the Rapper\n"};
+    question question1 = {"-> Question N1: Si tu devais choisir un jeu en open world, tu choisirais :\n1-GTA \n2-Minecraft \n3-Assasin's Creed \n4-Skyrim\n"};
+    question question2 = {"-> Question N2: Si tu devais choisir un jeu FPS, tu choisirais :\n1-Halo \n2-Call Of Duty \n3-Counter Strike GO \n4-Rainbow 6 Siege\n"};
+    question question3 = {"-> Question N3: Si tu devais choisir un jeu de simulation sportive, tu choisirais :\n1-Fifa \n2-Wii Sport \n3-Just Dance \n4-NBA\n"};
+    question question4 = {"-> Question N4: Si tu devais choisir un jeu de course, tu choisirais :\n1-Forza \n2-Need For Speed \n3-Mario Kart \n4-Gran Turismo\n"};
+    question question5 = {"-> Question N5: Si tu devais choisir un jeu d'aventure, tu choisirais :\n1-Tomb Raider \n2-Zelda \n3-Uncharted \n4-God Of War\n"};
+    question question6 = {"-> Question N6: Si tu devais choisir un versus fighting, lequel serait-il ?\n1-Street Fighter\n2-Soul Calibur\n3-Tekken\n4-Mortal Kombat\n"};
+    question question7 = {"-> Question N7: Si tu devais choisir un jeu de strategie/gestion, lequel prendrais-tu ?\n1-Age of Empire\n2-Civilization\n3-Warcraft\n4-Les Sims\n"};
+    question question8 = {"-> Question N8: Si tu devais choisir un jeu mobile, ce serait lequel ?\n1-Candy Crush Saga\n2-DBZ Dokkan Battle\n3-Clash Royal\n4-Pokemon Go\n"};
+    question question9 = {"-> Question N9: Si tu devais choisir un platformer, sur lequel sauterais-tu ? \n1-Mario\n2-Rayman\n3-Sonic\n4-Alex Kidd\n"};
+    question question10 = {"-> Question N10: Si tu devais choisir un survival horror, pour lequel frissonerais-tu ?\n1-Resident Evil\n2-Alone In The Dark\n3-The Evil Within\n4-Alien Isolation\n"};
+    question question11 = {"-> Question N11: Si tu devais choisir un jeu de rythme/musique, sur lequel t'ambiancerais-tu ?\n1-Osu\n2-Guitar Hero\n3-Piano Tiles\n4-Parapara the Rapper\n"};
     
     a_question[0] = question1;
     a_question[1] = question2;
@@ -52,9 +56,10 @@ int main (){
     
 
     //INTRO
+    printf("\n");
     printf("Veuillez entrer votre prenom:\n");
-    scanf("%s", &nomJoueur);
-    printf("Bonjour et bienvenue %s, vous souhaitez vous renseignez sur le metier de game designer \net plus generalement sur la formation de game design proposee par l'ETPA.\nVeuillez repondre aux 10 questions qui vont suivre. \nUn score vous sera attribue en fonction de vos reponses afin de jauger votre compatibilite avec la formation\n",&nomJoueur);
+    scanf("%s%[^\n]", &nomJoueur);
+    printf("Bonjour et bienvenue %s, vous souhaitez vous renseignez sur le metier de game designer \net plus generalement sur la formation de game design proposee par l'ETPA.\nVeuillez repondre aux 10 questions qui vont suivre. \nUn score vous sera attribue en fonction de vos reponses afin de jauger votre compatibilite avec la formation.\n",&nomJoueur);
     //printf("%d", play);
     
     while (play != 0){
@@ -62,9 +67,12 @@ int main (){
         //display game
         for (i=0; i<=10; i++){
         
+        	printf("\n");
             printf("%s", a_question[i].questiontxt);
+            printf("\n");
                 
             //scan reponse
+            printf("Reponse choisie:");
             scanf("%d", &choixRep);
             while (choixRep!=1 && choixRep!=2 && choixRep!=3 && choixRep!=4)
             {
@@ -158,31 +166,33 @@ int main (){
     }
     
     printf("Votre score final est de : %d \n", scoreJoueur);
+    compatibilite=scoreJoueur*bonneReponse;
+    printf("\n");
 
 
 	if (scoreJoueur < 0)
 	{
-		printf("Je crois que vous vous etes perdu............. 'Taux de compatibilite 0 pourcent'\n");
+		printf("Je crois que tu t'es perdu %s ............. 'Taux de compatibilite %.2f pourcent'\n", &nomJoueur, compatibilite);
 	}
-	else if(scoreJoueur >=0 && scoreJoueur <= 5)
+	else if(scoreJoueur >=0 && scoreJoueur <= 4)
 	{
-		printf("Change de voie, si tu veux casino recrute.............. 'Taux de compatibilite 10 pourcent'\n");
+		printf("Change de voie %s, si tu veux casino recrute.............. 'Taux de compatibilite %.2f pourcent'\n", &nomJoueur, compatibilite);
 	}
-	else if(scoreJoueur >=6 && scoreJoueur<= 10)
+	else if(scoreJoueur >=5 && scoreJoueur<= 9)
 	{
-		printf("C'est pas ouf, va falloir revoir les classiques..............'Taux de compatibilite 30 pourcent'\n");
+		printf("C'est pas ouf %s, va falloir revoir les classiques..............'Taux de compatibilite %.2f pourcent'\n", &nomJoueur, compatibilite);
 	}
-	else if(scoreJoueur >=11 && scoreJoueur<= 15)
+	else if(scoreJoueur >=10 && scoreJoueur<= 13)
 	{
-		printf("Pas trop mal............. 'Taux de compatibilite 50 pourcent' \n");
+		printf("Pas trop mal %s, il y a peut etre de la fibre de game designer en toi............. 'Taux de compatibilite %.2f pourcent' \n", &nomJoueur, compatibilite);
 	}
-	else if(scoreJoueur >=16 && scoreJoueur<= 19)
+	else if(scoreJoueur >=14 && scoreJoueur<= 17)
 	{
-		printf("Wow %s il semblerait que tu sois fait(e) pour le game design............. 'Taux de compatibilite 80 pourcent' \n", &nomJoueur);
+		printf("Wow %s, il semblerait que tu sois fait(e) pour le game design............. 'Taux de compatibilite %.2f pourcent' \n", &nomJoueur, compatibilite);
 	}
-	else if(scoreJoueur >=20 )
+	else if(scoreJoueur >=18 )
 	{
-		printf("Impressionnant %s c'est donc toi le(la) future game designer dont parle la legende !!............. 'Taux de compatibilite 1000 pourcent' \n", &nomJoueur);
+		printf("Impressionnant %s, c'est donc toi le(la) future game designer dont parle la legende !!............. 'Taux de compatibilite %.2f pourcent' \n", &nomJoueur, compatibilite);
 	}
     
 
