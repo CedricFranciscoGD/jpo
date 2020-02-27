@@ -22,9 +22,9 @@ int main (){
 	char nomJoueur[50];
     
     int nb_question = 11;
-    scoreJoueur = 0;
+    scoreJoueur = 5;
     
-    bonneReponse=5.26;
+    bonneReponse=4;
     //compatibilite=0;
 
     question a_question[11];
@@ -153,9 +153,9 @@ int main (){
             }
 
             if (i==10){
-                if (choixRep==1){scoreJoueur +=2;}
-                if (choixRep==2){scoreJoueur --;}
-                if (choixRep==3){scoreJoueur ++;}
+                if (choixRep==1){scoreJoueur ++;}
+                if (choixRep==2){scoreJoueur +=2;}
+                if (choixRep==3){scoreJoueur --;}
                 if (choixRep==4){scoreJoueur ++;}   
             }
             
@@ -165,34 +165,35 @@ int main (){
         if (i=10){play=0;}
     }
     
-    printf("Votre score final est de : %d \n", scoreJoueur);
+    printf("\n");
+    printf("Votre score final est de : %d/25 \n", scoreJoueur);
     compatibilite=scoreJoueur*bonneReponse;
     printf("\n");
 
 
 	if (scoreJoueur < 0)
 	{
-		printf("Je crois que tu t'es perdu %s ............. 'Taux de compatibilite %.2f pourcent'\n", &nomJoueur, compatibilite);
+		printf("Je crois que tu t'es perdu %s . \n\n'Taux de compatibilite %.2f pourcent'\n", &nomJoueur, compatibilite);
 	}
 	else if(scoreJoueur >=0 && scoreJoueur <= 4)
 	{
-		printf("Change de voie %s, si tu veux casino recrute.............. 'Taux de compatibilite %.2f pourcent'\n", &nomJoueur, compatibilite);
+		printf("Change de voie %s, si tu veux casino recrute. \n\n'Taux de compatibilite %.2f pourcent'\n", &nomJoueur, compatibilite);
 	}
 	else if(scoreJoueur >=5 && scoreJoueur<= 9)
 	{
-		printf("C'est pas ouf %s, va falloir revoir les classiques..............'Taux de compatibilite %.2f pourcent'\n", &nomJoueur, compatibilite);
+		printf("C'est pas ouf %s, va falloir revoir les classiques.\n\n'Taux de compatibilite %.2f pourcent'\n", &nomJoueur, compatibilite);
 	}
 	else if(scoreJoueur >=10 && scoreJoueur<= 13)
 	{
-		printf("Pas trop mal %s, il y a peut etre de la fibre de game designer en toi............. 'Taux de compatibilite %.2f pourcent' \n", &nomJoueur, compatibilite);
+		printf("Pas trop mal %s, il y a peut etre de la fibre de game designer en toi.\n\n'Taux de compatibilite %.2f pourcent' \n", &nomJoueur, compatibilite);
 	}
 	else if(scoreJoueur >=14 && scoreJoueur<= 17)
 	{
-		printf("Wow %s, il semblerait que tu sois fait(e) pour le game design............. 'Taux de compatibilite %.2f pourcent' \n", &nomJoueur, compatibilite);
+		printf("Wow %s, il semblerait que tu sois fait(e) pour le game design. \n\n'Taux de compatibilite %.2f pourcent' \n", &nomJoueur, compatibilite);
 	}
 	else if(scoreJoueur >=18 )
 	{
-		printf("Impressionnant %s, c'est donc toi le(la) future game designer dont parle la legende !!............. 'Taux de compatibilite %.2f pourcent' \n", &nomJoueur, compatibilite);
+		printf("Impressionnant %s, c'est donc toi le(la) future game designer dont parle la legende !! \n\n'Taux de compatibilite %.2f pourcent' \n", &nomJoueur, compatibilite);
 	}
     
 
